@@ -30,7 +30,7 @@ export default function Form(props) {
     return (
         <FormWrapper>
         <div className="form">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} id="pizza-form">
                 <h1> Create Your Pizza! </h1>
 
 
@@ -65,7 +65,7 @@ export default function Form(props) {
                     <select onChange={onChange}
                     value={values.size}
                     name="size"
-                    className="size"
+                    id="size-dropdown"
                     >
                         <option value=""> -------------SIZE------------- </option>
                         <option value="small"> Snack (6" Diameter)</option>
@@ -123,6 +123,7 @@ export default function Form(props) {
 
                 <label> Pineapple
                     <input 
+                    id="special-instructions"
                     type="checkbox"
                     onChange={onChange}
                     name="pineapple"
@@ -143,7 +144,7 @@ export default function Form(props) {
                 
                 <h4> </h4>
 
-                <button className= "submit" disabled={disabled}> Submit Your Order </button>
+                <button id= "order-button" disabled={disabled}> Submit Your Order </button>
 
             </form>
         </div>
